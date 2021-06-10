@@ -1,0 +1,20 @@
+microservice-helm-chart:
+  namespace: sandbox
+  deployment:
+    aws:
+      role:
+        name: SandboxMavenTestRepoRole
+  app:
+    name: maven-test-repo
+    version: 1.0.0-SNAPSHOT
+  summon:
+    enabled: true
+  config:
+    cbs:
+      enabled: true
+    database:
+      enabled: true
+    custom:
+      enabled: true
+      values:
+        FORCE_DEPLOYMENT: "true"
